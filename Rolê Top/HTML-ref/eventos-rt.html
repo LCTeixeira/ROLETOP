@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Agendar evento</title>
+    <link rel="stylesheet" type="text/css" href="style-rt.css"/>
+    </head>
+</head>
+<body>
+
+    <form method="GET" action="dashboard.html">
+
+    <h2>Cadastrar Eventos</h2>
+
+    <div>
+        <label for="text">Nome do Evento</label>
+        <br />
+        <input id="text" type="text"/>
+    </div>
+
+    <br />
+
+    <div>
+        <label for="tipo-evento">Tipo de Evento</label>
+        <select id="tipo-evento" required>
+            <option value="" disabled selected>selecione</option>
+            <option value="casamento">Casamento</option>
+            <option value="aniversario">Aniversário</option>
+            <option value="show">Shows</option>
+            <option value="outros">Outros</option>
+        </select>
+    </div>
+
+    <br />
+
+    <div>
+        <input type="date" id="data" value="Data">
+    </div>
+
+    <br />
+
+    <div>
+        <label for="descrição">Descrição do Evento</label>
+        <br />
+        <input id="descrição" type="text">
+    </div>
+
+    <div>
+        <label for="tipo-pagamento">Tipo de pagamento</label>
+        <select id="tipo-pagamento" required>
+            <option value="" disabled selected>selecione</option>
+            <option value="cartaoD">Cartão Debito</option>
+            <option value="cartaoC">Cartão Credito</option>
+            <option value="dinheiro">Dinheiro</option>
+            <option value="boleto">Boleto</option>
+        </select>
+    </div>
+</form>
+</body>
+</html>

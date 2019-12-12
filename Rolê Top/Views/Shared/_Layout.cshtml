@@ -1,0 +1,54 @@
+﻿@model Rolê_Top.ViewModel.BaseViewModel
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Rolê Top</title>
+        <link rel="stylesheet" type="text/css" href="style-rt.css"/>
+    </head>
+
+    <body>
+        
+            <header>
+            <div id=logo>
+                <img src="img-rt/logo.png" width="140em" />
+            </div>
+                <nav>
+                    <ul>
+                        @if(string.IsNullOrEmpty(@Model.UsuarioEmail)){
+            <div id="login" class="normal"><a asp-controller="Cliente" asp-action="Login" class="cor-lm">Login</a></div>
+            }
+            else{
+                <div class="dropdown" id="usuario" class="normal"><a asp-controller="Cliente" asp-action="MeusEventos" class="cor-lm">@Model.UsuarioNome <i id="botao-logoff" class="fas fa-play"></i></a>
+                    <div class="dropdown-content">
+                        <a asp-controller="Cliente" asp-action="InfoUsuario" >Minhas Informações</a>
+                        <a asp-controller="Cliente" asp-action="MeusEventos" >Meus Eventos</a>
+                        <a asp-controller="Cliente" asp-action="Logoff" >Logout</a>
+                    </div>
+                </div>
+            }
+                        <li><a href="index.html"> Início </a></li>
+                        <li><a href="index.html#Galeria">Galeria</a></li>
+                        <li><a href="index.html#FAQ">FAQ</a></li>
+                        <li><a href="index.html#Localização">Localização</a></li>
+                        <li><a href="eventos-rt.html">Agendar Evento</a></li>
+                        <li><a asp-controller="Cadastro" asp-action="index">Cadastro</a></li>  
+                    </ul>
+                </nav>
+                
+            </header>
+            @RenderBody()
+        
+        
+        <footer>
+
+            <p>Alameda Barão de Limeira, 539</p>
+            <p>Quem somos?</p>
+            <p>Tel: xxxxx-xxx</p>
+            <p>E-mail:***************.***</p>
+            <a href="#">Voltar ao Topo</a>
+            
+        </footer>
+
+    </body>
+</html>

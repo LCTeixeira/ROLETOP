@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>cadastro/login</title>
+    <link rel="stylesheet" type="text/css" href="~/style-rt.css"/>
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <img src="C:\Users\52007254883\Desktop\Agora-vai\2s-2019-t1-role_top\Rolê top\img-rt\logo.png" width="140em" />
+        </div>
+    </header>
+
+
+<form method="POST" action='@Url.Action("Login", "Cliente")'>
+
+    <h2>login</h2>
+
+    <div>
+        <label for="email">E-mail</label>
+        <br />
+        <input id="email" type="email" />
+    </div>
+    
+    <div>
+        <label for="senha">Senha</label>
+        <br />
+        <input id="senha" type="password" />
+    </div>
+    
+    <div>
+        <input  type="submit" value="Login"/>
+    </div>
+    
+
+</form>
+<form method = "POST" action = '@Url.Action("Cadastro", "Cliente")'>
+<h2>Cadastro</h2>
+
+    <div>
+        <label for="email">E-mail</label>
+        <br />
+        <input id="email" type="email" />
+    </div>
+
+    <div>
+        <label for="senha">Senha</label>
+        <br />
+        <input id="senha" type="password" />
+    </div>
+
+    <div>
+        <label for="text">CPF</label>
+        <br />
+        <input id="text" type="text" />
+    </div>
+
+    <div>
+        <label for="tel">Tel.</label>
+        <br />
+        <input id="tel" type="number" />
+    </div>
+
+    <div>
+        <input type="submit" value="Cadastre-se" />
+    </div>
+</form>
+
+    <footer>
+
+        <p>Alameda Barão de Limeira, 539</p>
+        <p>Quem somos?</p>
+        <p>Tel: xxxxx-xxx</p>
+        <p>E-mail:********@*******.***</p>
+        
+    </footer>
+
+</body>
+</html>
