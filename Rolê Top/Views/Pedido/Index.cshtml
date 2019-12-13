@@ -1,0 +1,69 @@
+<main>
+<body>
+
+    <form method="POST" action='@Url.Action("Registrar","Pedido")'>
+
+    <h2>Cadastrar Eventos</h2>
+
+    <div>
+        <label for="text">Nome do Evento</label>
+        <br />
+        <input id="text" type="text" name = "nome_Evento"/>
+    </div>
+
+    <br />
+
+    <div>
+        <label for="tipo-evento">Tipo de Evento</label>
+        <select id="tipo-evento" name = "tipo-evento" required>
+            <option value="" disabled selected>selecione</option>
+            <option value="0">Casamento</option>
+            <option value="1">Aniversário</option>
+            <option value="2">Shows</option>
+            <option value="3">Outros</option>
+        </select>
+    </div>
+
+    <br />
+
+    <div>
+        <input type="date" id="data_pedido" value="Data" name = "data">
+    </div>
+
+    <br />
+    <div>
+        <label for="preco-evento">Tipo de Evento</label>
+        <select id="preco-evento" name = "p_evento" required>
+            <option value="" disabled selected>selecione</option>
+            <option value="0">Basico</option>
+            <option value="1">Som</option>
+            <option value="2">Luz</option>
+            <option value="3">Completo</option>
+    </div>
+
+    <br />
+
+    <div>
+        <label for="descrição">Descrição do Evento</label>
+        <br />
+        <input id="descrição" type="text" name = "descricao">
+    </div>
+
+    <br />
+
+    <div>
+        <label for="tipo-pagamento">Tipo de pagamento</label>
+        <select id="tipo-pagamento" name = "t_Pagamento" required >
+            <option value="" disabled selected>selecione</option>
+            <option value="cartaoD">Cartão Debito</option>
+            <option value="cartaoC">Cartão Credito</option>
+            <option value="dinheiro">Dinheiro</option>
+            <option value="boleto">Boleto</option>
+        </select>
+    </div>
+    <div>
+        <input type="submit" value="Cadastrar Evento"/>
+    </div>
+</form>
+</body>
+</main>

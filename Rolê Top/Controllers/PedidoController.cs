@@ -32,30 +32,29 @@ namespace Rolê_Top.Controllers
             
             return View(pvm);
         }
-        public IActionResult Registrar (IFormCollection form) {
+        public IActionResult Registrar(IFormCollection form) {
             ViewData["Action"] = "Pedido";
             Pedido pedido = new Pedido ();
-
-            Cliente cliente = new Cliente () {
-                Nome = form["nome"],
-                Telefone = form["telefone"],
-                Email = form["email"]
-
-            };
-
-            pedido.cliente = cliente;
+            System.Console.WriteLine("=============================================");
+            System.Console.WriteLine(ObterUsuarioSession());
+            System.Console.WriteLine("=============================================");
+            pedido.cliente = clienteRepository.ObterPor(ObterUsuarioSession());
 
             pedido.DataDoPedido = DateTime.Now;
+            pedido.Nome_Evento = form["nome_Evento"];
+            pedido.tipoEvento = uint.Parse(form["tipo-evento"]);
+            pedido.DataDoPedido = DateTime.Parse(form["data"]);
+            pedido.PreçoEvento = uint.Parse(form["p_evento"]);
+            pedido.tipoPagamento = form["t_Pagamento"]; 
 
-
-            if (pedidoRepository.Inserir (pedido)) {
+            if (pedidoRepository.Inserir(pedido)) {
                 return View ("Sucesso", new RespostaViewModel () {
                     NomeView = "Pedido"
                 });
 
             } else {
 
-                return View ("Erro", new RespostaViewModel () {
+                return View ("Error", new RespostaViewModel () {
                     NomeView = "Pedido"
                 });
             }

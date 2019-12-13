@@ -53,9 +53,7 @@ namespace Rolê_Top.Repositories
                 p.Status = uint.Parse(ExtrairValorDoCampo("status_pedido", l));
                 p.PreçoEvento = uint.Parse(ExtrairValorDoCampo("preco_eventos", l));
                 p.cliente.Nome = ExtrairValorDoCampo("cliente_nome", l);
-                p.cliente.Telefone = ExtrairValorDoCampo("cliente_telefone", l);
-                p.cliente.Email = ExtrairValorDoCampo("cliente_email", l);
-                p.PrecoTotal = double.Parse(ExtrairValorDoCampo("preco_total", l));
+                p.tipoEvento = uint.Parse(ExtrairValorDoCampo("tipo-evento", l));
                 p.DataDoPedido = DateTime.Parse(ExtrairValorDoCampo("data_pedido", l));
 
                 pedidos.Add(p);
@@ -76,7 +74,7 @@ namespace Rolê_Top.Repositories
             return null;
         }
         
-        public Pedido ObterPreço()
+        
         public bool Atualizar(Pedido p)
         {
             var pedidosTotais = File.ReadAllLines(PATH);
@@ -107,7 +105,7 @@ namespace Rolê_Top.Repositories
         {
             Cliente c = p.cliente;
             
-            return $"id={p.Id};status_pedido={p.Status};cliente_nome={c.Nome};cliente_telefone={c.Telefone};cliente_email={c.Email};data_pedido={p.DataDoPedido};preco_total={p.PrecoTotal};preco_eventos={p.PreçoEvento};";
+            return $"id={p.Id};status_pedido={p.Status};cliente_nome={c.Nome};cliente_telefone={c.Telefone};cliente_email={c.Email};data_pedido={p.DataDoPedido};preco_eventos={p.PreçoEvento};tipo-evento={p.tipoEvento}";
         }
     }
 }

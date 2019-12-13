@@ -12083,11 +12083,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\52007254883\\Desktop\\Rolê Top\\Rolê Top.csproj",
+      "projectUniqueName": "C:\\Users\\52007254883\\Desktop\\ROLETOP\\Rolê Top\\Rolê Top.csproj",
       "projectName": "Rolê Top",
-      "projectPath": "C:\\Users\\52007254883\\Desktop\\Rolê Top\\Rolê Top.csproj",
+      "projectPath": "C:\\Users\\52007254883\\Desktop\\ROLETOP\\Rolê Top\\Rolê Top.csproj",
       "packagesPath": "C:\\Users\\52007254883\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\52007254883\\Desktop\\Rolê Top\\obj\\",
+      "outputPath": "C:\\Users\\52007254883\\Desktop\\ROLETOP\\Rolê Top\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
